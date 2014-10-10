@@ -1,0 +1,87 @@
+body {
+	background-image: url("img/pattern_munnecos.jpg");
+
+}
+p {
+	font-family: Goudy Old Style, serif;
+	letter-spacing: 2px;
+}
+h1 {
+	font-family: arial narrow, sans serif;
+	color: CRIMSON;
+}
+input {
+	border: 1px solid #DCDCDC;
+	border-radius: 10px;
+	display: block;
+	margin-bottom: 5px;
+}
+button {
+	border-radius: 50px;
+	background-color: CRIMSON;
+	border: none;
+}
+.container {
+	margin: 100px auto;
+	width: 580px;
+}
+.container h1 {
+	margin-bottom: 10px;
+	letter-spacing: 3px;
+}
+.message img {
+	height: 170px;
+	width: 170px;
+	border: 15px solid CRIMSON;
+	border-radius: 100px;
+}
+.message>article {
+	background-color: white;
+	width: 400px;
+	float: right;
+	border-radius: 50px;
+	padding: 28px;
+	margin-left: 10px;
+	border: 1px solid CRIMSON;
+	line-height: 20px;
+}
+.comment {
+	float: right;
+	margin-top: 10px;
+}
+.comment img {
+	height: 90px;
+	width: 90px;
+	border: 10px solid CRIMSON;
+	border-radius: 100px;
+}
+.comment>article {
+	background-color: white;
+	width: 310px;
+	border-radius: 40px;
+	padding: 20px;
+	margin-left: 10px;
+	border: 1px solid CRIMSON;
+	line-height: 20px;
+	float: right;
+}
+input:first-child {
+	border: 1px solid CRIMSON;
+	height: 22px;
+}
+input:last-child {
+	height: 50px;
+	width: 250px;
+}
+placeholder:first-child {
+   color: CRIMSON;
+}
+.comment button {
+	color: white;
+	float: right;
+}
+.triang {
+	height: 50px;
+	width: 50px;
+	border: 10px;
+}
