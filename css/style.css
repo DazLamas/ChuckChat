@@ -1,0 +1,83 @@
+body {
+  background-image: url("../img/pattern_munnecos.jpg");
+  background-size: contain;
+  font-family: Goudy Old Style, serif;
+  letter-spacing: 2px; }
+
+.main-container {
+  margin: 100px auto;
+  width: 580px; }
+
+.message .avatar,
+.comment .avatar {
+  border-radius: 100px; }
+.message .wrapper,
+.comment .wrapper {
+  background-color: white;
+  margin-left: 10px;
+  border: 1px solid CRIMSON;
+  line-height: 20px;
+  float: right; }
+  .message .wrapper h1,
+  .comment .wrapper h1 {
+    font-family: arial narrow, sans serif;
+    color: CRIMSON;
+    margin-bottom: 10px; }
+
+.message {
+  width: 580px;
+  height: 222px; }
+  .message .avatar {
+    height: 170px;
+    width: 170px;
+    border: 15px solid CRIMSON; }
+  .message .wrapper {
+    width: 400px;
+    border-radius: 45px;
+    padding: 25px; }
+
+.comment {
+  float: right;
+  margin-top: 10px; }
+  .comment .avatar {
+    height: 90px;
+    width: 90px;
+    border: 10px solid CRIMSON; }
+  .comment .wrapper {
+    width: 310px;
+    border-radius: 35px;
+    padding: 22px; }
+  .comment textarea {
+    width: 250px; }
+  .comment input {
+    height: 22px; }
+  .comment input,
+  .comment textarea {
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid CRIMSON; }
+  .comment button {
+    border-radius: 50px;
+    background-color: CRIMSON;
+    border: none;
+    color: white;
+    float: right; }
+    .comment button:hover {
+      cursor: pointer; }
+
+.error {
+  color: CRIMSON;
+  font-weight: bolder;
+  font-size: 14px; }
+  .error::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: CRIMSON; }
+  .error::-moz-placeholder {
+    /* Firefox 19+ */
+    color: CRIMSON; }
+  .error:-ms-input-placeholder {
+    /* IE 10+ */
+    color: CRIMSON; }
+  .error:-moz-placeholder {
+    /* Firefox 18- */
+    color: CRIMSON; }

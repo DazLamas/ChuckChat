@@ -1,0 +1,126 @@
+//Variables:
+
+$text_font: 			Goudy Old Style, serif;
+$highligth_font:  arial narrow, sans serif;
+
+$primary_color: 	CRIMSON;
+$regular-size: 		10px;
+
+body {
+	background-image: url("../img/pattern_munnecos.jpg");
+	background-size: contain;
+	font-family: $text_font;
+	letter-spacing: 2px;
+}
+.main-container {
+  margin: 100px auto;
+  width: 580px;
+}
+
+//Common text-box structure
+.message,
+.comment {
+	.avatar {
+		border-radius: 100px;
+	}
+	.wrapper  {
+		background-color: white;
+		margin-left: $regular-size;
+		border: 1px solid $primary_color;
+		line-height: 20px;
+		float: right;
+		h1 {
+			font-family: $highligth_font;
+			color: $primary_color;
+			margin-bottom: $regular-size;
+		}
+	}
+}
+
+$message_textbox_width: 580px;
+.message  {
+	width: $message_textbox_width;
+  height: 222px;
+	.avatar {
+		height: 170px;
+		width: 170px;
+		border: 15px solid $primary_color;
+	}
+	.wrapper  {
+		width: 400px;
+		border-radius: 45px;
+		padding: 25px;
+	}
+}
+
+.comment {
+	float: right;
+	margin-top: $regular-size;
+	.avatar {
+		height: 90px;
+		width: 90px;
+		border: $regular-size solid $primary_color;
+	}
+	.wrapper {
+		width: 310px;
+		border-radius: 35px;
+		padding: 22px;
+	}
+	textarea {
+		width: 250px;
+	}
+	input {
+		height: 22px;
+	}
+	input,
+	textarea {
+		margin-bottom: $regular-size;
+		border: none;
+		border-bottom: 1px solid $primary_color;
+	}
+	button {
+		border-radius: 50px;
+		background-color: $primary_color;
+		border: none;
+		color: white;
+		float: right;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+//Errors:
+.error {
+  color: $primary_color;
+  font-weight: bolder;
+	font-size: 14px;
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: $primary_color;
+	}
+	&::-moz-placeholder { /* Firefox 19+ */
+	  color: $primary_color;
+	}
+	&:-ms-input-placeholder { /* IE 10+ */
+	  color: $primary_color;
+	}
+	&:-moz-placeholder { /* Firefox 18- */
+	  color: $primary_color;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
