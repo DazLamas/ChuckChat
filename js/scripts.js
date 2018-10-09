@@ -11,7 +11,7 @@
 
   var html, avatar;
 
-   function resetAll() {
+  function resetAll() {
     new_comment     = {username: "", text: ""};
     filled_inputs   = 0;
     $error_element.addClass('invisible');
@@ -59,9 +59,24 @@
         url: 'https://api.chucknorris.io/jokes/random',
         dataType: 'application/json',
         complete: function(data){
-            placeNewComment('Chuck Norris', JSON.parse(data.responseText).value, 'chucknorris.jpg')
+            placeNewComment('Chuck Norris', JSON.parse(data.responseText).value, 'chucknorris.jpg');
+            scrollToLastTextBox();
         }
     })
+  }
+
+  //ToDo: check bucle; check variables-memory; improve array of children
+  function scrollToLastTextBox() {
+
+    var new_scroll = 0;
+    var $all_children = $('.main-container').find('> section');
+
+    for (var i = 0; i < $all_children.length; i++) {
+      new_scroll += $($all_children[i]).height()
+    };
+
+    $('.main-container').animate({ scrollTop: new_scroll }, 'slow');
+
   }
 
   $trigger.on('click', function(e) {
@@ -86,29 +101,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // var setNewComment = function(key, texts){
-  //   this.key   = key;
-  //   this.texts = texts;
-  // };
-
-  // function getNewCommentData() {
-  //   for (var i = 0; i < $inputs.length; i++) {
-  //     new_comment.push((new setNewComment(inputs[i].name, inputs[i].value)));
-  //   };
-  //   placeNewComment();
-  // };
