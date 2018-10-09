@@ -6,14 +6,29 @@ $highligth_font:  arial narrow, sans serif;
 $primary_color: 	CRIMSON;
 $regular-size: 		10px;
 
+$viewport_height: 100vh;
+
+html {
+	height: 100%;
+	margin: 0px;
+}
+
 body {
+	height: 100vh;
+	width: 100%;
+	margin: 0px;
 	background-image: url("../img/pattern_munnecos.jpg");
-	background-size: contain;
+	background-size: cover;
 	font-family: $text_font;
 	letter-spacing: 2px;
+	display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 .main-container {
-  margin: 100px auto;
+  margin: 30px 0;
+  max-height: 90%;
+  overflow-y: auto;
   width: 580px;
 }
 
@@ -40,7 +55,6 @@ body {
 $message_textbox_width: 580px;
 .message  {
 	width: $message_textbox_width;
-  height: 222px;
 	.avatar {
 		height: 170px;
 		width: 170px;
