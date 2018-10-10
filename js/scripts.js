@@ -9,7 +9,7 @@
   function resetAll() {
     new_comment     = {username: "", text: ""};
     filled_inputs   = 0;
-    $error_element.addClass('invisible');
+    $error_element.text(" ");
   }
 
   function getNewCommentData() {
@@ -67,7 +67,7 @@
 
     resetAll();
 
-    if(checkEmpty() && countWords($inputs[1].value) >= 5) {
+    if(checkEmpty() && hasMinimunWords($inputs[1].value)) {
       getNewCommentData();
     };
 
