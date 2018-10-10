@@ -67,6 +67,8 @@
 
     resetAll();
 
+    //hasMin.. split
+    //manage errors here, somehow
     if(checkEmpty() && hasMinimunWords($inputs[1].value)) {
       getNewCommentData();
     };
