@@ -1,13 +1,8 @@
 (function ($, window, document, undefined) {
 
   var new_comment    = {username: "", text: ""};
-  var $inputs        = $('.js-input');
   var $trigger       = $('.js-get-inputs-prop');
   var $trigger_scope = $('.js-new-comment-form-container');
-
-  var filled_inputs   = 0;
-  var inputs_amount   = $inputs.length;
-  var $error_element  = $('.error');
 
   var html, avatar;
 
@@ -16,17 +11,6 @@
     filled_inputs   = 0;
     $error_element.addClass('invisible');
   }
-
-  function checkEmpty() {
-    for (var i = 0; i < inputs_amount; i++) {
-      if ($($inputs[i]).val() !== "") {
-        filled_inputs += 1;
-      }else {
-        $error_element.removeClass('invisible');
-      };
-    };
-      return filled_inputs === inputs_amount;
-  } ;
 
   function getNewCommentData() {
     for (var i = 0; i < $inputs.length; i++) {
@@ -43,7 +27,7 @@
             + username
             + '</h1><p>'
             + text
-            + '</p></div></section>'
+            + '</p></div></section>';
 
     $(html).insertBefore($trigger_scope);
 
@@ -72,20 +56,20 @@
     var $all_children = $('.chat-container .wrapper').find('> section');
 
     for (var i = 0; i < $all_children.length; i++) {
-      new_scroll += $($all_children[i]).height()
+      new_scroll += $($all_children[i]).height();
     };
 
     $('.chat-container').animate({ scrollTop: new_scroll }, 'slow');
 
-  }
+  };
 
   $trigger.on('click', function(e) {
 
     resetAll();
 
-    if(checkEmpty()) {
+    if(checkEmpty() && countWords($inputs[1].value) >= 5) {
       getNewCommentData();
-    }
+    };
 
   });
 
