@@ -90,7 +90,9 @@ body {
 .error {
   color: CRIMSON;
   font-weight: bolder;
-  font-size: 14px; }
+  font-size: 14px;
+  display: block;
+  min-height: 20px; }
   .error::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: CRIMSON; }
