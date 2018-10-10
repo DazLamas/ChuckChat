@@ -37,7 +37,7 @@
 
   function placeNewComment(username, text, avatar_url) {
 
-    avatar = avatar_url || 'avatar_guest.png';
+    avatar = avatar_url || 'abuela-avatar-bg-x2.png';
 
     html  =  '<section class="comment cf"><img src="img/'+ avatar +'" alt="avatar2" class="avatar"><div class="wrapper"><h1>'
             + username
@@ -69,13 +69,13 @@
   function scrollToLastTextBox() {
 
     var new_scroll = 0;
-    var $all_children = $('.main-container').find('> section');
+    var $all_children = $('.chat-container .wrapper').find('> section');
 
     for (var i = 0; i < $all_children.length; i++) {
       new_scroll += $($all_children[i]).height()
     };
 
-    $('.main-container').animate({ scrollTop: new_scroll }, 'slow');
+    $('.chat-container').animate({ scrollTop: new_scroll }, 'slow');
 
   }
 
