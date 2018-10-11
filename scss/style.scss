@@ -24,6 +24,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(../img/pattern_munnecos.jpg);
+  background-size: 60% 60%;
 }
 .chat-container {
 	height: 100%;
@@ -32,8 +34,6 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: url(../img/pattern_munnecos.jpg);
-  background-size: 75% 75%;
   .wrapper {
   	padding: 30px 10px;
   	height: 100%;
