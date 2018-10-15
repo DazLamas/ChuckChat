@@ -25,7 +25,7 @@
 
     html  =  '<section class="small-msg-box cf"><img src="img/'+ avatar +'" alt="avatar2" class="avatar"><div class="wrapper"><h1 class="username">'
             + username
-            + '</h1><p>'
+            + '</h1><span class="js-score-element score"></span><p>'
             + text
             + '</p></div></section>';
 
