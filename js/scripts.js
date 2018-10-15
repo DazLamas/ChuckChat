@@ -23,7 +23,7 @@
 
     avatar = avatar_url || 'abuela-avatar-bg-x2.png';
 
-    html  =  '<section class="comment cf"><img src="img/'+ avatar +'" alt="avatar2" class="avatar"><div class="wrapper"><h1>'
+    html  =  '<section class="comment cf"><img src="img/'+ avatar +'" alt="avatar2" class="avatar"><div class="wrapper"><h1 class="username">'
             + username
             + '</h1><p>'
             + text

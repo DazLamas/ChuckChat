@@ -41,11 +41,16 @@ body {
   border: 1px solid CRIMSON;
   line-height: 20px;
   float: right; }
-  .message .wrapper h1,
-  .comment .wrapper h1 {
-    font-family: arial narrow, sans serif;
-    color: CRIMSON;
-    margin-bottom: 10px; }
+.message .username,
+.comment .username {
+  font-family: arial narrow, sans serif;
+  color: CRIMSON;
+  margin-bottom: 10px;
+  display: inline-block; }
+.message .score,
+.comment .score {
+  display: inline-block;
+  float: right; }
 
 .message {
   width: 580px; }

@@ -52,11 +52,16 @@ body {
 		border: 1px solid $primary_color;
 		line-height: 20px;
 		float: right;
-		h1 {
-			font-family: $highligth_font;
-			color: $primary_color;
-			margin-bottom: $regular-size;
-		}
+	}
+	.username {
+		font-family: $highligth_font;
+		color: $primary_color;
+		margin-bottom: $regular-size;
+		display: inline-block;
+	}
+	.score {
+		display: inline-block;
+		float: right;
 	}
 }
 
