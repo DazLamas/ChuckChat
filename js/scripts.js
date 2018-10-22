@@ -25,11 +25,15 @@
 
     html  =  '<section class="small-msg-box cf"><img src="img/'+ avatar +'" alt="avatar2" class="avatar"><div class="wrapper"><h1 class="username">'
             + username
-            + '</h1><span class="js-score-element score"></span><p>'
+            + '</h1><span class="js-place-score-here score"></span><p>'
             + text
             + '</p></div></section>';
 
     $(html).insertBefore($trigger_scope);
+
+    scrollToLastTextBox();
+
+    insertScore(username, document.getElementsByClassName('js-place-score-here'));
 
     if(username !== 'Chuck Norris'){//Prevent infinitive bucle with Chuck Norris' answers
       getChuckAnswer();
@@ -43,9 +47,12 @@
         url: 'https://api.chucknorris.io/jokes/random',
         dataType: 'application/json',
         complete: function(data){
-            placeNewComment('Chuck Norris', JSON.parse(data.responseText).value, 'chucknorris.jpg');
-            scrollToLastTextBox();
-        }
+            placeNewComment(
+                            'Chuck Norris',
+                            JSON.parse(data.responseText).value,
+                            'chucknorris.jpg'
+                          );
+        };
     })
   }
 
@@ -67,8 +74,8 @@
 
     resetAll();
 
-    //hasMin.. split
-    //manage errors here, somehow
+    //ToDo: hasMin.. split
+    //ToDo: manage errors here, somehow
     if(checkEmpty() && hasMinimunWords($inputs[1].value)) {
       getNewCommentData();
     };
@@ -77,13 +84,3 @@
 
 
 })(jQuery, window, document);
-
-
-
-
-
-
-
-
-
-

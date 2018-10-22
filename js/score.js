@@ -1,20 +1,18 @@
-// When:
-
-// - New user commnent
-// - chuck answer
-
-// calculate new score
-//   - chuck 2/3
-//   - other 1
-// find js-insert-text
-// insert new score
-
-var score_dom_element = document.getElementsByClassName('js-score-element')[0];
-
-function randomIntFromInterval(interval,first_number) {
-  return Math.floor(Math.random() * interval) + first_number;
+function randomIntFromInterval(max, min) {
+  return Math.floor(Math.random() * (max - min)) + min;
 };
 
-function insertText(where, text) {
-  where.innerHTML = text;
+function getScore(username) {
+  switch (username) {
+    case "Chuck Norris":
+      return randomIntFromInterval(4, 2); //Chuck always wins... Any question?
+      break;
+    default:
+      return randomIntFromInterval(1, 1);
+  };
+};
+
+function insertScore(username, score_output_dom_element) {
+  score_output_dom_element[0].innerText = getScore(username);
+  score_output_dom_element[0].classList.remove("js-place-score-here");
 };
