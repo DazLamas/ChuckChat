@@ -51,10 +51,10 @@
                             'Chuck Norris',
                             JSON.parse(data.responseText).value,
                             'chucknorris.jpg'
-                          );
-        };
+                          )
+        }
     })
-  }
+  };
 
   //ToDo: check bucle; check variables-memory; improve array of children
   function scrollToLastTextBox() {

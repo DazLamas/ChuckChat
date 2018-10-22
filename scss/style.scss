@@ -60,6 +60,8 @@ body {
 		display: inline-block;
 	}
 	.score {
+		font-family: $highligth_font;
+		font-size: 12px;
 		display: inline-block;
 		float: right;
 	}
@@ -137,19 +139,3 @@ $big-msg-box_textbox_width: 580px;
 	  color: $primary_color;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

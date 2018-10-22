@@ -49,6 +49,8 @@ body {
   display: inline-block; }
 .big-msg-box .score,
 .small-msg-box .score {
+  font-family: arial narrow, sans serif;
+  font-size: 12px;
   display: inline-block;
   float: right; }
 

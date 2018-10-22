@@ -13,6 +13,6 @@ function getScore(username) {
 };
 
 function insertScore(username, score_output_dom_element) {
-  score_output_dom_element[0].innerText = getScore(username);
+  score_output_dom_element[0].innerText = 'Score: ' + getScore(username);
   score_output_dom_element[0].classList.remove("js-place-score-here");
 };
