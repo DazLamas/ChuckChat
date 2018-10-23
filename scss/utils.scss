@@ -1,8 +1,14 @@
 .invisible {
   visibility: hidden;
 }
+.visible {
+  visibility: visible;
+}
 .d-block {
   display: block;
+}
+.d-none {
+  display: none;
 }
 .bold {
   font-weight: bold;

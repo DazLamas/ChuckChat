@@ -94,6 +94,9 @@ body {
     .small-msg-box button:hover {
       cursor: pointer; }
 
+.fa-star {
+  color: #ffcc00; }
+
 .error {
   color: CRIMSON;
   font-weight: bolder;

@@ -28,7 +28,7 @@
             + avatar
             + '" alt="avatar2" class="avatar"><div class="wrapper"><h1 class="username">'
             + username
-            + '</h1><span class="js-place-score-here score"></span><p>'
+            + '</h1><span class="js-place-score-here score"><i class="fa fa-star d-none" aria-hidden="true"></i><i class="fa fa-star d-none" aria-hidden="true"></i><i class="fa fa-star d-none" aria-hidden="true"></i></span><p>'
             + text
             + '</p></div></section>';
 
@@ -36,7 +36,7 @@
 
     scrollToLastTextBox();
 
-    insertScore(username, document.getElementsByClassName('js-place-score-here'));
+    insertScore(username, document.getElementsByClassName('js-place-score-here')[0]);
 
     if(username !== 'Chuck Norris'){//Prevent infinitive bucle with Chuck Norris' answers
       getChuckAnswer();

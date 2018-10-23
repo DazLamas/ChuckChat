@@ -12,7 +12,13 @@ function getScore(username) {
   };
 };
 
-function insertScore(username, score_output_dom_element) {
-  score_output_dom_element[0].innerText = 'Score: ' + getScore(username);
-  score_output_dom_element[0].classList.remove("js-place-score-here");
+function insertScore(username, stars_container) {
+
+  var iterations = getScore(username);
+  var stars      = stars_container.childNodes;
+
+  for (var i = 0; i < iterations; i++) {
+    stars[i].classList.remove('d-none');
+  }
+  stars_container.classList.remove("js-place-score-here");
 };
