@@ -1,7 +1,7 @@
 (function ($, window, document, undefined) {
 
   var new_comment    = {username: "", text: ""};
-  var $trigger       = $('.js-get-inputs-prop');
+  var $trigger       = $('.js-send-btn');
   var $trigger_scope = $('.js-new-comment-form-container');
 
   var html, avatar;
@@ -23,7 +23,10 @@
 
     avatar = avatar_url || 'abuela-avatar-bg-x2.png';
 
-    html  =  '<section class="small-msg-box cf"><img src="img/'+ avatar +'" alt="avatar2" class="avatar"><div class="wrapper"><h1 class="username">'
+    //+ (username == "Chuck Norris" ? "big" : "small")
+    html  =  '<section class="small-msg-box cf"><img src="img/'
+            + avatar
+            + '" alt="avatar2" class="avatar"><div class="wrapper"><h1 class="username">'
             + username
             + '</h1><span class="js-place-score-here score"></span><p>'
             + text
@@ -54,20 +57,6 @@
                           )
         }
     })
-  };
-
-  //ToDo: check bucle; check variables-memory; improve array of children
-  function scrollToLastTextBox() {
-
-    var new_scroll = 0;
-    var $all_children = $('.chat-container .wrapper').find('> section');
-
-    for (var i = 0; i < $all_children.length; i++) {
-      new_scroll += $($all_children[i]).height();
-    };
-
-    $('.chat-container').animate({ scrollTop: new_scroll }, 'slow');
-
   };
 
   $trigger.on('click', function(e) {
