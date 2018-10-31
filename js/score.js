@@ -18,7 +18,9 @@ function insertScore(username, stars_container) {
   var stars      = stars_container.childNodes;
 
   for (var i = 0; i < iterations; i++) {
-    stars[i].classList.remove('d-none');
-  }
+    stars[i].classList.add('magictime');
+    stars[i].classList.add('puffIn');
+  };
+
   stars_container.classList.remove("js-place-score-here");
 };

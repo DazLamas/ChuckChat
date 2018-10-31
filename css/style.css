@@ -95,7 +95,8 @@ body {
       cursor: pointer; }
 
 .fa-star {
-  color: #ffcc00; }
+  color: #ffcc00;
+  opacity: 0; }
 
 .error {
   color: CRIMSON;

@@ -1,7 +1,7 @@
 var $inputs         = $('.js-input');
 var filled_inputs   = 0;
 var inputs_amount   = $inputs.length;
-var $error_element  = $('.error');
+var error_element   = document.getElementById('error');
 
 function checkEmpty() {
 
@@ -29,5 +29,5 @@ function hasMinimunWords(msg_string) {
 };
 
 function showError(error) {
-  $error_element.text(error);
+  error_element.innerText = error;
 };
