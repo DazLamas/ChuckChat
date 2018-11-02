@@ -28,7 +28,7 @@
             + avatar
             + '" alt="avatar2" class="avatar"><div class="wrapper"><h1 class="username">'
             + username
-            + '</h1><span class="js-place-score-here score"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></span><p>'
+            + '</h1><span class="js-place-score-here score"><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i></span><p>'
             + text
             + '</p></div></section>';
 
