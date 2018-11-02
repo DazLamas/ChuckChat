@@ -1,12 +1,12 @@
-var $inputs         = $('.js-input');
+var form_inputs     = document.getElementsByClassName('js-input');
 var filled_inputs   = 0;
-var inputs_amount   = $inputs.length;
-var $error_element  = $('.error');
+var inputs_amount   = form_inputs.length;
+var error_element   = document.getElementById('error');
 
 function checkEmpty() {
 
   for (var i = 0; i < inputs_amount; i++) {
-    if ($($inputs[i]).val() !== "") {
+    if ($(form_inputs[i]).val() !== "") {
       filled_inputs += 1;
     }else {
       showError('All fields requiered');
@@ -29,5 +29,5 @@ function hasMinimunWords(msg_string) {
 };
 
 function showError(error) {
-  $error_element.text(error);
+  error_element.innerText = error;
 };

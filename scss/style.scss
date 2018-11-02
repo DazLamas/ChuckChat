@@ -41,8 +41,8 @@ body {
   }
 }
 //Common text-box structure
-.message,
-.comment {
+.big-msg-box,
+.small-msg-box {
 	.avatar {
 		border-radius: 100px;
 	}
@@ -52,17 +52,24 @@ body {
 		border: 1px solid $primary_color;
 		line-height: 20px;
 		float: right;
-		h1 {
-			font-family: $highligth_font;
-			color: $primary_color;
-			margin-bottom: $regular-size;
-		}
+	}
+	.username {
+		font-family: $highligth_font;
+		color: $primary_color;
+		margin-bottom: $regular-size;
+		display: inline-block;
+	}
+	.score {
+		font-family: $highligth_font;
+		font-size: 12px;
+		display: inline-block;
+		float: right;
 	}
 }
 
-$message_textbox_width: 580px;
-.message  {
-	width: $message_textbox_width;
+$big-msg-box_textbox_width: 580px;
+.big-msg-box  {
+	width: $big-msg-box_textbox_width;
 	.avatar {
 		height: 170px;
 		width: 170px;
@@ -75,7 +82,7 @@ $message_textbox_width: 580px;
 	}
 }
 
-.comment {
+.small-msg-box {
 	float: right;
 	margin-top: $regular-size;
 	.avatar {
@@ -111,7 +118,10 @@ $message_textbox_width: 580px;
 		}
 	}
 }
-
+.fa-star {
+	color: #ffcc00;
+	opacity: 0;
+}
 //Errors:
 .error {
   color: $primary_color;
@@ -132,19 +142,3 @@ $message_textbox_width: 580px;
 	  color: $primary_color;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

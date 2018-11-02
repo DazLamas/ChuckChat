@@ -31,61 +31,72 @@ body {
     height: 100%;
     width: 600px; }
 
-.message .avatar,
-.comment .avatar {
+.big-msg-box .avatar,
+.small-msg-box .avatar {
   border-radius: 100px; }
-.message .wrapper,
-.comment .wrapper {
+.big-msg-box .wrapper,
+.small-msg-box .wrapper {
   background-color: white;
   margin-left: 10px;
   border: 1px solid CRIMSON;
   line-height: 20px;
   float: right; }
-  .message .wrapper h1,
-  .comment .wrapper h1 {
-    font-family: arial narrow, sans serif;
-    color: CRIMSON;
-    margin-bottom: 10px; }
+.big-msg-box .username,
+.small-msg-box .username {
+  font-family: arial narrow, sans serif;
+  color: CRIMSON;
+  margin-bottom: 10px;
+  display: inline-block; }
+.big-msg-box .score,
+.small-msg-box .score {
+  font-family: arial narrow, sans serif;
+  font-size: 12px;
+  display: inline-block;
+  float: right; }
 
-.message {
+.big-msg-box {
   width: 580px; }
-  .message .avatar {
+  .big-msg-box .avatar {
     height: 170px;
     width: 170px;
     border: 15px solid CRIMSON; }
-  .message .wrapper {
+  .big-msg-box .wrapper {
     width: 400px;
     border-radius: 45px;
     padding: 25px; }
 
-.comment {
+.small-msg-box {
   float: right;
   margin-top: 10px; }
-  .comment .avatar {
+  .small-msg-box .avatar {
     height: 90px;
     width: 90px;
     border: 10px solid CRIMSON; }
-  .comment .wrapper {
+  .small-msg-box .wrapper {
     width: 310px;
     border-radius: 35px;
     padding: 22px; }
-  .comment textarea {
+  .small-msg-box textarea {
     width: 250px; }
-  .comment input {
+  .small-msg-box input {
     height: 22px; }
-  .comment input,
-  .comment textarea {
+  .small-msg-box input,
+  .small-msg-box textarea {
     margin-bottom: 10px;
     border: none;
     border-bottom: 1px solid CRIMSON; }
-  .comment button {
+  .small-msg-box button {
     border-radius: 50px;
     background-color: CRIMSON;
     border: none;
     color: white;
     float: right; }
-    .comment button:hover {
+    .small-msg-box button:hover {
       cursor: pointer; }
+
+.fa-star {
+  color: #ffcc00;
+  opacity: 0; }
 
 .error {
   color: CRIMSON;

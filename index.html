@@ -3,13 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Chuck Chat</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/animations.css">
 	<link rel="stylesheet" href="css/utils.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-3.3.1.min.js" defer></script>
+	<script src="js/utils.js" defer></script>
 	<script src="js/validations.js" defer></script>
 	<script src="js/score.js" defer></script>
+	<script src="js/animations.js" defer></script>
 	<script src="js/scripts.js" defer></script>
 </head>
 <body>
@@ -18,35 +22,35 @@
 			<div class="chat-container">
 				<div class="wrapper">
 
-					<section class="message cf">
+					<section class="big-msg-box cf">
 						<img src="img/chucknorris.jpg" alt="avatar1" class="avatar">
 						<div class="wrapper">
-							<h1>CHUCK NORRIS</h1>
+							<h1 class="username">CHUCK NORRIS</h1>
 							<p>
-							<span class="bold">"When Chuck Norris speaks, everyones listen. Then they died." </span>
+							<span class="bold">"When Chuck Norris speaks, everyones listen. Then they died."</span>
 							Come on, little bastards. Wanna compete with me telling the best Chuck Norris' joke?
 							</p>
 						</div>
 					</section>
 
-					<section class="comment cf">
+					<section class="small-msg-box cf">
 						<img src="img/julioiglesias.jpg" alt="avatar2" class="avatar">
 						<div class="wrapper">
-							<h1>JULIO IGLESIAS</h1>
+							<h1 class="username">JULIO IGLESIAS</h1>
 							<p>
 							And you know it
 							</p>
 						</div>
 					</section>
 
-					<section class="comment cf js-new-comment-form-container">
+					<section id="js-new-comment-form-container" class="small-msg-box cf">
 						<img src="img/abuela-avatar-bg-x2.png" alt="avatar2" class="avatar">
 						<div class="wrapper">
 							<input type="text" name="username" placeholder="Your name" class="js-input">
 							<textarea name="text" cols="30" rows="1" placeholder="Your best joke" class="js-input d-block"></textarea>
 							<div>
-								<span class="error"></span>
-								<button class="js-get-inputs-prop">Send</button>
+								<span id="error" class="error"></span>
+								<button id="js-send-btn">Send</button>
 							</div>
 						</div>
 					</section>
