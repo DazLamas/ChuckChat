@@ -2,22 +2,14 @@
 	box-sizing: border-box;
 }
 .cf:before, .cf:after {
-<<<<<<< HEAD
 	content: " ";
-=======
-	content: " "; 
->>>>>>> ba9c771d62fe7a9a347da6ec5c308e0a7a715262
 	display: table;
 }
 .cf:after {
 	clear: both;
-<<<<<<< HEAD
-}
-=======
 }
 .Vertical-Align {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%)
 }
->>>>>>> ba9c771d62fe7a9a347da6ec5c308e0a7a715262
