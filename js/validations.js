@@ -6,7 +6,7 @@ var error_element   = document.getElementById('error');
 function checkEmpty() {
 
   for (var i = 0; i < inputs_amount; i++) {
-    if ($(form_inputs[i]).val() !== "") {
+    if (form_inputs[i].value !== "") {
       filled_inputs += 1;
     }else {
       showError('All fields requiered');
