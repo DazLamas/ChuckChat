@@ -13,8 +13,8 @@
   }
 
   function getNewCommentData() {
-    for (var i = 0; i < $inputs.length; i++) {
-      new_comment_data[$inputs[i].name] = $inputs[i].value;
+    for (var i = 0; i < form_inputs.length; i++) {
+      new_comment_data[form_inputs[i].name] = form_inputs[i].value;
     };
     createAndPlaceNewComment(new_comment_data.username, new_comment_data.text);
   };
@@ -66,7 +66,7 @@
 
     //ToDo: hasMin.. split
     //ToDo: manage errors here, somehow
-    if(checkEmpty() && hasMinimunWords($inputs[1].value)) {
+    if(checkEmpty() && hasMinimunWords(form_inputs[1].value)) {
       getNewCommentData();
     };
 
