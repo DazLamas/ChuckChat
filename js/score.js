@@ -1,26 +1,27 @@
-function randomIntFromInterval(max, min) {
-  return Math.floor(Math.random() * (max - min)) + min;
-};
+var Score = (function scoreMethods() {
 
-function getScore(username) {
-  switch (username) {
-    case "Chuck Norris":
-      return randomIntFromInterval(4, 2); //Chuck always wins... Any question?
-      break;
-    default:
-      return randomIntFromInterval(1, 1);
-  };
-};
+    return {
+        getScore: function(username) {
+          switch (username) {
+            case "Chuck Norris":
+              return Utilities.randomIntFromInterval(4, 2); //Chuck always wins... Any question?
+              break;
+            default:
+              return Utilities.randomIntFromInterval(1, 1);
+          };
+        },
 
-function insertScore(username, stars_container) {
+        insertScore: function(username, stars_container) {
+          var puntuation = this.getScore(username);
+          var stars      = stars_container.childNodes;
 
-  var iterations = getScore(username);
-  var stars      = stars_container.childNodes;
+          for (var i = 0; i < puntuation; i++) {
+            stars[i].classList.add('magictime');
+            stars[i].classList.add('puffIn');
+          };
 
-  for (var i = 0; i < iterations; i++) {
-    stars[i].classList.add('magictime');
-    stars[i].classList.add('puffIn');
-  };
+          stars_container.classList.remove("js-place-score-here");
+        }
+    };
 
-  stars_container.classList.remove("js-place-score-here");
-};
+}());

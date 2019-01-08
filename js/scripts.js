@@ -34,8 +34,8 @@
 
     new_comment_form_container.insertAdjacentHTML('beforebegin', string);
 
-    scrollToLastTextBox();
-    insertScore(username, document.getElementsByClassName('js-place-score-here')[0]);
+    Animations.scrollToLastTextBox();
+    Score.insertScore(username, document.getElementsByClassName('js-place-score-here')[0]);
     if(username !== 'Chuck Norris'){
       getChuckAnswer();
     };

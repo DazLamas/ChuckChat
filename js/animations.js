@@ -1,13 +1,17 @@
 //ToDo: check bucle; check variables-memory; improve array of children
-function scrollToLastTextBox() {
+var Animations = (function animationsMethods() {
 
-  var new_scroll = 0;
-  var $all_children = $('.chat-container .wrapper').find('> section');
+    return {
+        scrollToLastTextBox: function() {
+          var new_scroll = 0;
+          var $all_children = $('.chat-container .wrapper').find('> section');
 
-  for (var i = 0; i < $all_children.length; i++) {
-    new_scroll += $($all_children[i]).height();
-  };
+          for (var i = 0; i < $all_children.length; i++) {
+            new_scroll += $($all_children[i]).height();
+          };
 
-  $('.chat-container').animate({ scrollTop: new_scroll }, 'slow');
+          $('.chat-container').animate({ scrollTop: new_scroll }, 'slow');
+        }
+    };
 
-};
+}());
